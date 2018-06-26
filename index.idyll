@@ -1,7 +1,7 @@
 
 [meta
   title:"Announcing idyll.pub"
-  description:"Publish interactive blog posts and explorable explanations with Idyll's new static hosting service."
+  description:"Publish interactive blog posts and explorable explanations with Idyll's free hosting service."
   twitterHandle:"mathisonian"
   shareImageUrl:"https://idyll.pub/post/announcing-idyll-pub-0a3eff0661df3446a915700d/static/images/share.png"
   shareImageWidth:"1200"
@@ -12,8 +12,8 @@
 
 [Header
   title:"Announcing idyll.pub"
-  subtitle:"Publish interactive blog posts and explorable explanations with Idyll's new static hosting service."
-  date:"June 25, 2018"
+  subtitle:"Publish interactive blog posts and explorable explanations with Idyll's free hosting service."
+  date:"June 26, 2018"
   authors:`[{
     name: "Matthew Conlen",
     link: "https://twitter.com/mathisonian"
@@ -44,7 +44,7 @@ $ idyll create
 $ cd my-post-name
 ```
 
-The `idyll` create command will create a new folder and generate the
+The `idyll create` command will create a new folder and generate the
 basic file structure for your new post. Use `cd` to navigate to the newly
 created post folder.
 
@@ -70,10 +70,12 @@ $ idyll publish
 Publishing will give you a stable, shareable link to your post, hosted by idyll.pub. If you republish after making updates or corrections,
 your link will be reused, so you can feel confident sharing it at any stage of the editing process.
 
+These links are generated using your post's name and a unique identifier. In the future you'll be able to create a user account and use links that look like `https://idyll.pub/<username>/<post-slug>/`.
+
 ### Acknowledgements
 
 We'd like to thank everyone who has helped us reach this milestone, including our contributors on GitHub and backers on [Open Collective](https://opencollective.com/idyll). Special thanks to Jeffrey Heer,
-Ben Clinkenbeard, Ricky Reusser, Zachary Kaplan, and Albert Wenger.
+Ben Clinkinbeard, Albert Wenger, Zachary Kaplan, and Ricky Reusser.
 
 If you like what we're doing, please
 
@@ -110,17 +112,16 @@ If you like what we're doing, please
   [/Step]
 
   [Step]
-
-    This component is implemented using D3 and Idyll markup. The source for this document is [available here](https://github.com/mathisonian/announcing-idyll-pub/blob/master/index.idyll).
-
-    [CustomD3Component className:"d3-component" state:state /]
-    [button onClick:`state++`]
+    [button onClick:`state++` style:`{ position: 'relative', top: 30 }`]
       Click Me.
     [/button]
+
+    [CustomD3Component className:"d3-component" state:state /]
+
+    This component is implemented using D3 and Idyll markup. The source for this article is [available here](https://github.com/mathisonian/announcing-idyll-pub/blob/master/index.idyll).
   [/Step]
 
   [Step]
-    This component is implemented using [Apparatus](http://aprt.us/)
 
     [IdyllApparatusComponent
       _url:"https://cdn.rawgit.com/mathisonian/3ad1fbf668086b5e4c742abfebbff541/raw/4a443db3db931c459b563bdea5323df75947d4ea/sum-of-odds.json"
@@ -128,16 +129,15 @@ If you like what we're doing, please
       _width: 300
       _height: 300 /]
 
-    without writing custom graphics code!
+    This component was implemented by [Joshua Horowitz](http://joshuahhh.com/) using [Apparatus](http://aprt.us/).
 
   [/Step]
   [Step]
-    See many more examples in [our gallery](https://idyll-lang.org/gallery)!
-
     [a href:"https://idyll-lang.org/gallery"]
       ![gallery](./static/images/gallery.png)
     [/a]
 
+    See many more examples in [our gallery](https://idyll-lang.org/gallery)!
   [/Step]
 
   [StepperControl /]
@@ -146,3 +146,6 @@ If you like what we're doing, please
 
 
 [/Fixed]
+
+
+[analytics google:"UA-108267630-1" tag:"announcing-idyll-pub" /]

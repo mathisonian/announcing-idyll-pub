@@ -5,7 +5,7 @@ class Header extends React.PureComponent {
     return (
       <div className={'article-header'}>
         <h1 className={'hed'}>
-          {this.props.title}
+          <a href="." style={{ color: '#6023fb', textDecoration: 'none'}}><span style={{fontSize: '2rem'}}>Announcing</span><br/><span style={{display: 'block', marginLeft:'28%'}}>idyll.pub</span></a>
         </h1>
         {
           this.props.subtitle && (

@@ -45,6 +45,8 @@ h2.dek {
 .fixed .idyll-stepper-control-button-next,
 .fixed .idyll-stepper-control-button-previous {
   width: 40px;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 
