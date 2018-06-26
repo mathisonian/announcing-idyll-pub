@@ -30,8 +30,8 @@ class Header extends React.PureComponent {
                     return author;
                   }
                   return author.link ? (
-                    <span>
-                      <a href={author.link} key={author.name}>{author.name}</a>{
+                    <span key={author.name}>
+                      <a href={author.link} >{author.name}</a>{
                         i < this.props.authors.length -1 ? (
                           i === this.props.authors.length - 2 ? ' and ' :  ', ' )
                         : ''}

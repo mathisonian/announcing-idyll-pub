@@ -1,5 +1,14 @@
 
-[meta title:"Announcing idyll.pub" description:"" /]
+[meta
+  title:"Announcing idyll.pub"
+  description:"Publish interactive blog posts and explorable explanations with Idyll's new static hosting service."
+  twitterHandle:"mathisonian"
+  shareImageUrl:"https://idyll.pub/post/announcing-idyll-pub-0a3eff0661df3446a915700d/static/images/share.png"
+  shareImageWidth:"1200"
+  shareImageHeight:"600"
+ /]
+
+ [Preload images:`["./static/images/gallery.png"]`/]
 
 [Header
   title:"Announcing idyll.pub"
@@ -16,10 +25,10 @@
 
 
 Along with the release of
- [Idyll version 3.0](https://github.com/idyll-lang/idyll#changelog--upgrade-guide), today we are announcing [https://idyll.pub](https://idyll.pub),
+ [Idyll version 3.0](https://github.com/idyll-lang/idyll#changelog--upgrade-guide), today we are pleased to announce [https://idyll.pub](https://idyll.pub),
 a free static hosting server for Idyll projects. The TL;DR is that you now get the following workflow:
 
-#### 1. Install the latest verions of Idyll
+#### 1. Install the latest verion of Idyll
 
 ```bash
 $ npm install -g idyll
@@ -59,7 +68,25 @@ $ idyll publish
 ![publish](./static/images/publish.gif)
 
 As you continue editing your project, re-running the `idyll publish` command will continue to update the
-same link, so you can feel confident sharing it.
+same link, so you can feel confident sharing it, even if you need to make updates or corrections.
+
+### Acknowledgements
+
+We'd like to thank everyone who has helped us reach this milestone, including our contributors on GitHub and backers on [Open Collective](https://opencollective.com/idyll). Special thanks to Jeffrey Heer,
+Ben Clinkenbeard, Ricky Reusser, Zachary Kaplan, and Albert Wenger.
+
+If you like what we're doing, please
+
+1. [Star the project on GitHub](https://github.com/idyll-lang/idyll/).
+2. Join the [chatroom](https://gitter.im/idyll-lang/Lobby) or [mailing list](https://groups.google.com/forum/#!forum/idyll-lang).
+3. [Buy a sticker](https://opencollective.com/idyll#).
+
+[a
+  className:"github-button"
+  href:"https://github.com/idyll-lang/idyll"
+  data-icon:"octicon-star"
+  data-show-count:"true"
+  aria-label:"Star idyll-lang/idyll on GitHub"]Star[/a]
 
 
 [Fixed]
@@ -69,18 +96,11 @@ same link, so you can feel confident sharing it.
 [var name:"stepperIndex" value:0 /]
 
 [Stepper currentStep:stepperIndex]
-
   [Step ]
 
-    [div style:`{padding: 40}`]
-      [a
-        className:"github-button"
-        href:"https://github.com/idyll-lang/idyll"
-        data-icon:"octicon-star"
-        data-show-count:"true"
-        aria-label:"Star idyll-lang/idyll on GitHub"]Star[/a]
+    [div className:"inner-step"]
 
-    ### Idyll is a framework for authoring and publishing interactive documents on the web.
+    ### Idyll is a framework for authoring and publishing interactive posts on the web.
 
     [br/]
     ***
@@ -91,7 +111,7 @@ same link, so you can feel confident sharing it.
 
   [Step]
 
-    This component is implemented using D3 and Idyll markup.
+    This component is implemented using D3 and Idyll markup. The source for this document is [available here](https://github.com/mathisonian/announcing-idyll-pub/blob/master/index.idyll).
 
     [CustomD3Component className:"d3-component" state:state /]
     [button onClick:`state++`]

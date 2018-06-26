@@ -51,9 +51,37 @@ h2.dek {
 canvas {
   left: 0;
 }
+
+.inner-step {
+  padding: 40px;
+}
+
 @media all and (max-width: 1000px) {
   .d3-component svg {
     max-height: 100px;
+  }
+
+  .fixed {
+    padding: 0;
+  }
+
+  .idyll-stepper {
+    height: auto !important;
+    margin: 0;
+  }
+
+  .inner-step {
+    padding: 0 40px;
+    font-size: 0.75rem;
+  }
+
+  .idyll-step-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .idyll-text-container {
+    margin: 0 !important;
   }
 }
 
