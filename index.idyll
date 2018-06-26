@@ -26,7 +26,7 @@
 
 Along with the release of
  [Idyll version 3.0](https://github.com/idyll-lang/idyll#changelog--upgrade-guide), today we are pleased to announce [https://idyll.pub](https://idyll.pub),
-a free static hosting server for Idyll projects. The TL;DR is that you now get the following workflow:
+a free static hosting server for Idyll projects. The TL;DR is that you can now publish your posts for free, straight from the command line. It works like this:
 
 #### 1. Install the latest verion of Idyll
 
@@ -57,7 +57,7 @@ $ idyll
 ```
 
 This will open the post in your web browser. Edit the file
-`index.idyll` to make changes. [See the docs for more info](https://idyll-lang.org/docs).
+`index.idyll` to make changes, and your browser will automatically update with the changes. [See the docs for more info](https://idyll-lang.org/docs).
 
 #### 4. Publish!
 
@@ -67,8 +67,8 @@ $ idyll publish
 
 ![publish](./static/images/publish.gif)
 
-As you continue editing your project, re-running the `idyll publish` command will continue to update the
-same link, so you can feel confident sharing it, even if you need to make updates or corrections.
+Publishing will give you a stable, shareable link to your post, hosted by idyll.pub. If you republish after making updates or corrections,
+your link will be reused, so you can feel confident sharing it at any stage of the editing process.
 
 ### Acknowledgements
 
