@@ -1,0 +1,59 @@
+
+a {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+  transition: all 0.15s;
+}
+a:hover {
+  color: #6023fb;
+  text-decoration-color: #6023fb;
+}
+
+h1.hed {
+  color: #6023fb;
+  /* text-align: center; */
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  /* margin-bottom: 2em; */
+}
+h2.dek {
+  font-weight: normal;
+}
+
+.d3-component svg {
+  background: #ddd;
+  max-height: 300px;
+}
+
+.idyll-step-content {
+  color: black;
+  background: none;
+  position: static;
+  text-align: center;
+}
+
+.idyll-step-graphic {
+  background: none;
+}
+
+.idyll-stepper {
+  display: flex;
+  align-items: center;
+}
+
+.fixed .idyll-stepper-control-button-next,
+.fixed .idyll-stepper-control-button-previous {
+  width: 40px;
+}
+
+
+canvas {
+  left: 0;
+}
+@media all and (max-width: 1000px) {
+  .d3-component svg {
+    max-height: 100px;
+  }
+}
+

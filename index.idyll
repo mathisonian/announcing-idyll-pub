@@ -1,0 +1,128 @@
+
+[meta title:"Announcing idyll.pub" description:"" /]
+
+[Header
+  title:"Announcing idyll.pub"
+  subtitle:"Publish interactive blog posts and explorable explanations with Idyll's new static hosting service."
+  date:"June 25, 2018"
+  authors:`[{
+    name: "Matthew Conlen",
+    link: "https://twitter.com/mathisonian"
+  }, {
+    name: "Andrew Osheroff",
+    link: "https://github.com/andrewosh"
+  }]` /]
+
+
+
+Along with the release of
+ [Idyll version 3.0](https://github.com/idyll-lang/idyll#changelog--upgrade-guide), today we are announcing [https://idyll.pub](https://idyll.pub),
+a free static hosting server for Idyll projects. The TL;DR is that you now get the following workflow:
+
+#### 1. Install the latest verions of Idyll
+
+```bash
+$ npm install -g idyll
+```
+
+This gives you access to the global `idyll` command. If you don't have npm installed, [follow
+these instructions to install it](https://www.npmjs.com/get-npm).
+
+#### 2. Create a new post
+
+```bash
+$ idyll create
+$ cd my-post-name
+```
+
+The `idyll` create command will create a new folder and generate the
+basic file structure for your new post. Use `cd` to navigate to the newly
+created post folder.
+
+![create](./static/images/create.gif)
+
+#### 3. Run the dev server
+
+```bash
+$ idyll
+```
+
+This will open the post in your web browser. Edit the file
+`index.idyll` to make changes. [See the docs for more info](https://idyll-lang.org/docs).
+
+#### 4. Publish!
+
+```bash
+$ idyll publish
+```
+
+![publish](./static/images/publish.gif)
+
+As you continue editing your project, re-running the `idyll publish` command will continue to update the
+same link, so you can feel confident sharing it.
+
+
+[Fixed]
+
+[var name:"state" value:0 /]
+[var name:"roi" value:`{ x: [-1.5, 7.5], y: [-1.5, 7.5 ] }` /]
+[var name:"stepperIndex" value:0 /]
+
+[Stepper currentStep:stepperIndex]
+
+  [Step ]
+
+    [div style:`{padding: 40}`]
+      [a
+        className:"github-button"
+        href:"https://github.com/idyll-lang/idyll"
+        data-icon:"octicon-star"
+        data-show-count:"true"
+        aria-label:"Star idyll-lang/idyll on GitHub"]Star[/a]
+
+    ### Idyll is a framework for authoring and publishing interactive documents on the web.
+
+    [br/]
+    ***
+
+    *Click the arrows to see example interactive components. See [idyll-lang.org](https://idyll-lang.org) for more info.*
+    [/div]
+  [/Step]
+
+  [Step]
+
+    This component is implemented using D3 and Idyll markup.
+
+    [CustomD3Component className:"d3-component" state:state /]
+    [button onClick:`state++`]
+      Click Me.
+    [/button]
+  [/Step]
+
+  [Step]
+    This component is implemented using [Apparatus](http://aprt.us/)
+
+    [IdyllApparatusComponent
+      _url:"https://cdn.rawgit.com/mathisonian/3ad1fbf668086b5e4c742abfebbff541/raw/4a443db3db931c459b563bdea5323df75947d4ea/sum-of-odds.json"
+      _regionOfInterest: roi
+      _width: 300
+      _height: 300 /]
+
+    without writing custom graphics code!
+
+  [/Step]
+  [Step]
+    See many more examples in [our gallery](https://idyll-lang.org/gallery)!
+
+    [a href:"https://idyll-lang.org/gallery"]
+      ![gallery](./static/images/gallery.png)
+    [/a]
+
+  [/Step]
+
+  [StepperControl /]
+
+[/Stepper]
+
+
+[/Fixed]

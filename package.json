@@ -1,0 +1,14 @@
+{
+  "name": "announcing-idyll-pub",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^4.0.0",
+    "idyll": "^3.0.9",
+    "idyll-apparatus-component": "^1.0.0",
+    "idyll-d3-component": "^2.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.12.0"
+  }
+}
